@@ -1,0 +1,27 @@
+Kubernetes is a container orchestration platform used to deploy and manage containers.
+A pod is the smallest unit in Kubernetes that runs one or more containers.
+To restart a pod: kubectl rollout restart deployment <name>
+To check pod logs: kubectl logs <pod-name>
+To check previous pod logs: kubectl logs <pod-name> --previous
+To describe a pod and see events: kubectl describe pod <pod-name>
+To check pod status: kubectl get pods
+To check all pods in all namespaces: kubectl get pods --all-namespaces
+To delete a pod and let it restart: kubectl delete pod <pod-name>
+CrashLoopBackOff means the container keeps crashing and restarting - always check logs first.
+OOMKilled means the container ran out of memory - increase memory limits in the deployment.
+ImagePullBackOff means Kubernetes cannot pull the Docker image - check image name and registry credentials.
+Pending pod means no node has enough resources - check node capacity with kubectl get nodes.
+To scale a deployment: kubectl scale deployment <name> --replicas=3
+To check deployment status: kubectl rollout status deployment <name>
+To undo a bad deployment: kubectl rollout undo deployment <name>
+To get all services: kubectl get services
+To expose a deployment: kubectl expose deployment <name> --port=80 --type=LoadBalancer
+A namespace is a way to isolate resources in a cluster.
+To create a namespace: kubectl create namespace <name>
+To set a context namespace: kubectl config set-context --current --namespace=<name>
+ConfigMap stores non-secret configuration data as key-value pairs.
+Secret stores sensitive data like passwords and API keys in base64 encoded format.
+A liveness probe checks if a container is running.
+A readiness probe checks if a container is ready to serve traffic.
+Resource limits prevent a container from using too much CPU or memory.
+Horizontal Pod Autoscaler scales pods based on CPU or memory usage automatically.

@@ -1,0 +1,31 @@
+Docker is a containerisation platform that packages apps into containers.
+A container is a lightweight isolated environment that runs an application.
+A Docker image is a blueprint for creating containers.
+Dockerfile is a text file with instructions to build a Docker image.
+To build an image: docker build -t myapp .
+To build with a specific tag: docker build -t myapp:v1 .
+To run a container: docker run -p 8000:8000 myapp
+To run in background: docker run -d -p 8000:8000 myapp
+To list running containers: docker ps
+To list all containers including stopped: docker ps -a
+To stop a container: docker stop <container-id>
+To remove a container: docker rm <container-id>
+To view container logs: docker logs <container-id>
+To follow logs in real time: docker logs -f <container-id>
+To enter a running container: docker exec -it <container-id> bash
+To list Docker images: docker images
+To remove an image: docker rmi <image-id>
+To push image to Docker Hub: docker push username/imagename
+To pull image from Docker Hub: docker pull username/imagename
+Docker Compose runs multiple containers together using a yml file.
+To start all services: docker compose up --build
+To start in background: docker compose up -d
+To stop all services: docker compose down
+To view compose logs: docker compose logs
+A volume persists data even when a container is stopped or removed.
+To create a volume: docker volume create myvolume
+Environment variables pass configuration to containers using -e flag or .env file.
+Never put secrets or API keys inside a Dockerfile - use environment variables.
+A multi-stage build reduces final image size by separating build and runtime stages.
+To check Docker disk usage: docker system df
+To clean up unused resources: docker system prune
