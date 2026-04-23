@@ -12,7 +12,7 @@ function App() {
     setInput("");
     setLoading(true);
     try {
-      const res = await fetch("https://YOUR_HF_USERNAME-infrachat.hf.space/chat", {
+      const res = await fetch("https://shrutika1293-infrachat.hf.space/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
