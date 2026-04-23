@@ -1,0 +1,9 @@
+Docker is a containerisation platform. 
+To build an image: docker build -t myapp . 
+To run a container: docker run -p 8000:8000 myapp 
+To list containers: docker ps 
+To stop a container: docker stop <container-id>
+To view logs: docker logs <container-id>
+Docker Compose runs multiple containers together. 
+To start compose: docker compose up --build 
+To stop compose: docker compose down

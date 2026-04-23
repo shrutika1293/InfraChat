@@ -1,0 +1,27 @@
+CI/CD stands for Continuous Integration and Continuous Deployment.
+CI automatically builds and tests code on every git push.
+CD automatically deploys code to production after tests pass.
+GitHub Actions is a CI/CD tool built into GitHub.
+A workflow file is stored at .github/workflows/deploy.yml
+A workflow is triggered by events like push, pull request, or schedule.
+A job is a set of steps that run on the same runner machine.
+A step is a single command or action inside a job.
+To build a Docker image in GitHub Actions use the docker build command.
+To push to Docker Hub store credentials as GitHub Secrets.
+GitHub Secrets store sensitive values like API keys and passwords securely.
+Never hardcode passwords or API keys in workflow files.
+A pull request triggers a workflow to test code before merging.
+Branch protection rules prevent merging without passing CI checks.
+Jenkins is an open source CI/CD automation server.
+A Jenkinsfile defines pipeline stages like build test and deploy.
+Pipeline stages in Jenkins are build, test, push, deploy.
+ArgoCD is a GitOps tool that automatically syncs Kubernetes with GitHub.
+A rolling deployment updates containers gradually with zero downtime.
+A blue green deployment runs two identical environments and switches traffic.
+A canary deployment releases to a small percentage of users first.
+Health check endpoint returns 200 OK when app is running correctly.
+Artifacts are files produced by a build like Docker images or test reports.
+A registry stores Docker images - examples are Docker Hub, ECR, and GCR.
+To trigger a deploy automatically add a deploy step after the push step.
+Environment variables in CI/CD pipelines should always come from secrets.
+A failed pipeline stops deployment so broken code never reaches production.

@@ -1,0 +1,8 @@
+CI/CD automates building testing and deploying code. 
+GitHub Actions runs pipelines on every git push. 
+A pipeline has stages - build, test, push, deploy. 
+Jenkinsfile defines pipeline stages in Jenkins. 
+Always store secrets in environment variables not in code. 
+Docker Hub stores Docker images for deployment. 
+A health check endpoint confirms the app is running. 
+Rolling deployment updates containers with zero downtime.
