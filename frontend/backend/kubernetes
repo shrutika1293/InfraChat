@@ -1,8 +1,0 @@
-Kubernetes is a container orchestration platform. 
-To restart a pod: kubectl rollout restart deployment <name>
-To check pod logs: kubectl logs <pod-name>
-To describe a pod: kubectl describe pod <pod-name>
-To check pod status: kubectl get pods 
-CrashLoopBackOff means the container keeps crashing - check logs. 
-OOMKilled means the container ran out of memory - increase limits. 
-To scale a deployment: kubectl scale deployment --replicas=3
