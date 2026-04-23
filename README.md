@@ -3,7 +3,7 @@
 An AI-powered DevOps assistant built with RAG pipeline, LangChain, and FastAPI.
 
 ## 🌐 Live Demo
-[Click here to use InfraChat](https://YOUR_NETLIFY_URL.netlify.app)
+[Click here to use InfraChat](https://devinfrachat.netlify.app)
 
 ## 🛠️ Tech Stack
 - **Frontend:** React
